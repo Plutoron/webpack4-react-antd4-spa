@@ -1,0 +1,73 @@
+// 填加单位后缀
+u(n)
+  n == 0 ? n : unit(n, px)
+
+// font color
+$font-colors = {
+  '0': #000,
+  '3': #333,
+  '4': #444,
+  '5': #555,
+  '6': #666,
+  '7': #777,
+  '8': #888,
+  '9': #999,
+  'a': #aaa,
+  'b': #bbb,
+  'c': #ccc,
+  'd': #ddd,
+  'e': #eee,
+  'f': #fff,
+  '45': rgba(0, 0, 0, 0.45),
+  '65': rgba(0, 0, 0, 0.65),
+  '85': rgba(0, 0, 0, 0.85),
+  '78f': #0078ff,
+}
+
+for $key, $value in $font-colors
+  .fc{$key}
+    color $value
+
+// font size
+for $n in 0 12 14 16 18 20 22 24 26 28 30
+  .fs{$n}
+    font-size u($n)
+
+// all padding
+for $n in 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 48
+  .p{$n}
+    padding u($n)
+
+// special padding
+for $n in 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 48
+  .pt{$n}
+    padding-top u($n)
+  .pr{$n}
+    padding-right u($n)
+  .pb{$n}
+    padding-bottom u($n)
+  .pl{$n}
+    padding-left u($n)
+
+// all margin
+for $n in 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 48
+  .m{$n}
+    margin u($n)
+
+// special margin
+for $n in 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 48
+  .mt{$n}
+    margin-top u($n)
+  .mr{$n}
+    margin-right u($n)
+  .mb{$n}
+    margin-bottom u($n)
+  .ml{$n}
+    margin-left u($n)
+
+for $n in 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 48
+  .lh{$n}
+    line-height u($n)
+
+.bgf 
+  background-color #fff
