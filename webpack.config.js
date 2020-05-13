@@ -65,7 +65,7 @@ module.exports = (env, argv) => {
       },
       minimizer: [
         ...(isDEV ? [] : [
-          new TenserPlugin()
+          new TerserPlugin()
 				]),
         new OptimizeCSSAssetsPlugin({
           assetNameRegExp: /\.css$/g,
